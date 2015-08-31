@@ -20,7 +20,7 @@ public:
                 m[nums[i]]=1;
             }
             else{
-                //this vector is neccesarry
+                //需要把键存起来然后做删除操作，因为如果在map的遍历过程中删除，这个遍历就不是原来的方式
                 vector<int> keys;
                 for(auto &kv:m){
                     keys.push_back(kv.first);
