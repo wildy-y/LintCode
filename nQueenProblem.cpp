@@ -6,7 +6,7 @@ public:
         this->N=a;
         this->res= new int *[a+1];
         for(int i=0;i<a+1;++i){
-            res[i]=new int[a+1];
+            this->res[i]=new int[a+1];
         }
     }
     ~theQueen(){
