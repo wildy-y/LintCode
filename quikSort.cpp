@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 void quikSort(int a[],int first,int end){
     int i=first,j=end;
     int temp=a[first];
@@ -23,7 +25,14 @@ void quikSort(int a[],int first,int end){
 int  main(int argc, char const *argv[])
 {
     /* code */
-    int a[9]={1,56,12,53,7,-9.100,20,2};
+    //int a[9]={1,56,12,53,7,-9.100,20,2};
+    srand(unsigned(time(NULL)));
+    int a[9];
+    for (int i = 0; i < 9; ++i)
+    {
+        /* code */
+        a[i] = random()%1000;
+    }
     quikSort(a,0,8);
     for (int i = 0; i < 9; ++i)
     {
