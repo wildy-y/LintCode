@@ -12,18 +12,17 @@ public:
      * @param target: a integer
      * @return a list of lists of integer
      */
-    vector<int> r;
-    vector<vector<int>> res;
+
     vector<vector<int> > kSumII(vector<int> A, int k, int target) {
         // write your code here
-        vector<vector<int>> ret;
+        vector<int> r;
+        vector<vector<int>> res;
         int len=A.size();
         if(k>len){return res;}
-        solve(A,k,target,r,0);
-        ret =res;
-        return ret;
+        solve(A,k,target,r,0,res);
+        return res;
     }
-    void solve(vector<int> A,int k,int target,vector<int> &r,int begin){
+    void solve(vector<int> A,int k,int target,vector<int> &r,int begin,vector<vector<int>> &res){
         if(k==0&&target==0){
             res.push_back(r);
             return ;
